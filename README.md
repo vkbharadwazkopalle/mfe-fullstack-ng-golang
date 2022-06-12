@@ -13,15 +13,24 @@ Choose an empty workspace for flexibility to set up full-stack angular & react a
 
 ![image](https://user-images.githubusercontent.com/5936702/173212583-74139580-3ec9-4145-b337-8901b9d7b3e6.png)
 
-
 ---
 
 Since we have the workspace ready, we can move forward to install the angular plugin
-cd micro-frontends
-npm i @nrwl/angular --save-dev
+
+`cd micro-frontends`
+`npm i @nrwl/angular --save-dev`
+
 After the above steps, your package.json should be similar to the above.
-Creating host & remote applications
-Add Host Application
+
+![image](https://user-images.githubusercontent.com/5936702/173212618-63b66947-a662-4907-ba2c-085514688106.png)
+
+## Creating host & remote applications
+
+**Add Host Application**
+
 The host is our base application that can help you load the remotes on-demand with routing. Let's create one.
-nx g @nrwl/angular:host host 
-You can find the progress till this step on my GitHub Repo for reference
+
+`nx g @nrwl/angular:host host`
+
+![image](https://user-images.githubusercontent.com/5936702/173212641-ec0f3120-39ca-4ed6-ae26-745e600ff632.png)
+
