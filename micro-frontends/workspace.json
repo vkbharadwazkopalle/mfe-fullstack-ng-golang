@@ -3,6 +3,12 @@
   "version": 2,
   "projects": {
     "host": "apps/host",
-    "host-e2e": "apps/host-e2e"
+    "host-e2e": "apps/host-e2e",
+    "remote1": "apps/remote1",
+    "remote1-e2e": "apps/remote1-e2e",
+    "remote2": "apps/remote2",
+    "remote2-e2e": "apps/remote2-e2e",
+    "remote3": "apps/remote3",
+    "remote3-e2e": "apps/remote3-e2e"
   }
 }

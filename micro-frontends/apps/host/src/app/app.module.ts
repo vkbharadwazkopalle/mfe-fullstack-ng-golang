@@ -15,6 +15,21 @@ import { RouterModule } from '@angular/router';
           path: '',
           component: NxWelcomeComponent,
         },
+        {
+          path: 'remote1',
+          loadChildren: () =>
+            import('remote1/Module').then((m) => m.RemoteEntryModule),
+        },
+        {
+          path: 'remote2',
+          loadChildren: () =>
+            import('remote2/Module').then((m) => m.RemoteEntryModule),
+        },
+        {
+          path: 'remote3',
+          loadChildren: () =>
+            import('remote3/Module').then((m) => m.RemoteEntryModule),
+        },
       ],
       { initialNavigation: 'enabledBlocking' }
     ),
