@@ -9,6 +9,7 @@
     "remote2": "apps/remote2",
     "remote2-e2e": "apps/remote2-e2e",
     "remote3": "apps/remote3",
-    "remote3-e2e": "apps/remote3-e2e"
+    "remote3-e2e": "apps/remote3-e2e",
+    "utils": "libs/utils"
   }
 }

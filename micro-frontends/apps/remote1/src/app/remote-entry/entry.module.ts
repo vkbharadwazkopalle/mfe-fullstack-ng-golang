@@ -3,16 +3,21 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { RemoteEntryComponent } from './entry.component';
-import { NxWelcomeComponent } from './nx-welcome.component';
 
 @NgModule({
-  declarations: [RemoteEntryComponent, NxWelcomeComponent],
+  declarations: [RemoteEntryComponent],
   imports: [
     CommonModule,
     RouterModule.forChild([
       {
         path: '',
         component: RemoteEntryComponent,
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../modules/projects/projects.module').then(m => m.ProjectsModule)
+          }
+        ]
       },
     ]),
   ],

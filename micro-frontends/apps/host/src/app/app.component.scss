@@ -1,0 +1,14 @@
+.remote-menu {
+  display: flex;
+  li {
+    list-style-type: none;
+    justify-content: space-between;
+    width: 5rem;
+    a {
+      &.active {
+        padding-bottom: 1rem;
+        border-bottom: 4px solid greenyellow;
+      }
+    }
+  }
+}
