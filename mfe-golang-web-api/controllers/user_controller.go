@@ -2,9 +2,9 @@ package controllers
 
 import (
 	"context"
-	"mfe-with-go-docker/configs"
-	"mfe-with-go-docker/models"
-	"mfe-with-go-docker/responses"
+	"mfe-golang-web-api/configs"
+	"mfe-golang-web-api/models"
+	"mfe-golang-web-api/responses"
 	"net/http"
 	"time"
 

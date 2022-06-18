@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"mfe-with-go-docker/controllers"
+	"mfe-golang-web-api/controllers"
 
 	"github.com/gin-gonic/gin"
 )

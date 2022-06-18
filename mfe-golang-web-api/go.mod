@@ -1,4 +1,4 @@
-module mfe-with-go-docker
+module mfe-golang-web-api
 
 go 1.18
 

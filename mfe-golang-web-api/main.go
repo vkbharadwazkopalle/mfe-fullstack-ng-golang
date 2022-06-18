@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"mfe-with-go-docker/configs"
-	"mfe-with-go-docker/routes"
+	"mfe-golang-web-api/configs"
+	"mfe-golang-web-api/routes"
 
 	"github.com/gin-gonic/gin"
 )
