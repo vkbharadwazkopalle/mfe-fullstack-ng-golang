@@ -53,7 +53,7 @@ func CreateUser() gin.HandlerFunc {
 	}
 }
 
-func GetAUser() gin.HandlerFunc {
+func GetUser() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 		userId := c.Param("userId")
@@ -72,7 +72,7 @@ func GetAUser() gin.HandlerFunc {
 	}
 }
 
-func EditAUser() gin.HandlerFunc {
+func EditUser() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 		userId := c.Param("userId")
@@ -113,7 +113,7 @@ func EditAUser() gin.HandlerFunc {
 	}
 }
 
-func DeleteAUser() gin.HandlerFunc {
+func DeleteUser() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 		userId := c.Param("userId")
