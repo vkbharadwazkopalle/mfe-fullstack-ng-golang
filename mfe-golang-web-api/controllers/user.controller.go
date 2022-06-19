@@ -37,10 +37,10 @@ func CreateUser() gin.HandlerFunc {
 		}
 
 		newUser := models.User{
-			Id:       primitive.NewObjectID(),
-			Name:     user.Name,
-			Location: user.Location,
-			Title:    user.Title,
+			Id:      primitive.NewObjectID(),
+			Name:    user.Name,
+			Project: user.Project,
+			Title:   user.Title,
 		}
 
 		result, err := userCollection.InsertOne(ctx, newUser)
@@ -73,6 +73,7 @@ func GetUser() gin.HandlerFunc {
 }
 
 func EditUser() gin.HandlerFunc {
+
 	return func(c *gin.Context) {
 		ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 		userId := c.Param("userId")
@@ -92,7 +93,7 @@ func EditUser() gin.HandlerFunc {
 			return
 		}
 
-		update := bson.M{"name": user.Name, "location": user.Location, "title": user.Title}
+		update := bson.M{"name": user.Name, "project": user.Project, "title": user.Title}
 		result, err := userCollection.UpdateOne(ctx, bson.M{"id": objId}, bson.M{"$set": update})
 		if err != nil {
 			c.JSON(http.StatusInternalServerError, responses.UserResponse{Status: http.StatusInternalServerError, Message: "error", Data: map[string]interface{}{"data": err.Error()}})
@@ -123,7 +124,14 @@ func DeleteUser() gin.HandlerFunc {
 
 		result, err := userCollection.DeleteOne(ctx, bson.M{"id": objId})
 		if err != nil {
-			c.JSON(http.StatusInternalServerError, responses.UserResponse{Status: http.StatusInternalServerError, Message: "error", Data: map[string]interface{}{"data": err.Error()}})
+			c.JSON(
+				http.StatusInternalServerError,
+				responses.UserResponse{
+					Status:  http.StatusInternalServerError,
+					Message: "error",
+					Data:    map[string]interface{}{"data": err.Error()},
+				},
+			)
 			return
 		}
 
