@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "auth": "libs/auth",
     "host": "apps/host",
     "host-e2e": "apps/host-e2e",
     "remote1": "apps/remote1",
@@ -9,6 +10,7 @@
     "remote2": "apps/remote2",
     "remote2-e2e": "apps/remote2-e2e",
     "remote3": "apps/remote3",
-    "remote3-e2e": "apps/remote3-e2e"
+    "remote3-e2e": "apps/remote3-e2e",
+    "ui": "libs/ui"
   }
 }

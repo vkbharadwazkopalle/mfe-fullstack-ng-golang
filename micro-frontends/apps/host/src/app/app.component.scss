@@ -1,0 +1,12 @@
+ .remote-menu {
+    list-style-type: none;
+    li {
+      display: inline-flex;
+      padding: 0 1rem 0 0;
+      a {
+        &.active {
+          color: red;
+        }
+      }
+    }
+ }

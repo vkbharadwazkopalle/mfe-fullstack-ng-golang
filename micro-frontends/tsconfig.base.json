@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@micro-frontends/auth": ["libs/auth/src/index.ts"],
+      "@micro-frontends/ui": ["libs/ui/src/index.ts"]
+    },
+    "types": ["node"]
   },
   "exclude": ["node_modules", "tmp"]
 }

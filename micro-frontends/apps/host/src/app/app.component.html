@@ -1,7 +1,16 @@
-<ul class="remote-menu">
-  <li><a routerLink="/">Home</a></li>
-  <li><a routerLink="remote1">Remote1</a></li>
-  <li><a routerLink="remote2">Remote2</a></li>
-  <li><a routerLink="remote3">Remote3</a></li>
-</ul>
+<div class="flex center">
+  <h1 class="col">MFE</h1>
+  <ul class="col remote-menu right grow">
+    <li *ngFor="let route of routes">
+      <a
+        [routerLink]="route.route"
+        routerLinkActive="active" 
+        [routerLinkActiveOptions]="{exact: true}">
+        {{ route.name }}
+      </a>
+    </li>
+  </ul>  
+</div>
 <router-outlet></router-outlet>
+
+<div>The home page</div>
