@@ -8,7 +8,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2015",
+    "target": "esnext",
     "module": "esnext",
     "lib": ["es2017", "dom"],
     "skipLibCheck": true,
@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@micro-frontends/auth": ["libs/auth/src/index.ts"],
-      "@micro-frontends/ui": ["libs/ui/src/index.ts"]
+      "@micro-frontends/ui": ["libs/ui/src/index.ts"],
+      "@micro-frontends/utils": ["libs/utils/src/index.ts"]
     },
     "types": ["node"]
   },

@@ -16,19 +16,19 @@ import { AuthGuard, AuthModule } from '@micro-frontends/auth';
       [
         {
           path: 'remote1',
-          // canActivate: [AuthGuard],
+          canActivate: [AuthGuard],
           loadChildren: () =>
             import('remote1/Module').then((m) => m.RemoteEntryModule),
         },
         {
           path: 'remote2',
-          // canActivate: [AuthGuard],
+          canActivate: [AuthGuard],
           loadChildren: () =>
             import('remote2/Module').then((m) => m.RemoteEntryModule),
         },
         {
           path: 'remote3',
-          // canActivate: [AuthGuard],
+          canActivate: [AuthGuard],
           loadChildren: () =>
             import('remote3/Module').then((m) => m.RemoteEntryModule),
         },

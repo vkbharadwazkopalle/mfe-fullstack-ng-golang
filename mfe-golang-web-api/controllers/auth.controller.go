@@ -93,7 +93,11 @@ func Login() gin.HandlerFunc {
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to save session"})
 			return
 		}
-		c.JSON(http.StatusOK, gin.H{"message": "Successfully authenticated user"})
+		c.JSON(http.StatusOK, responses.UserResponse{
+			Status:  http.StatusOK,
+			Message: "Successfully authenticated user",
+			Data:    map[string]interface{}{"data": session.Get(userkey)},
+		})
 		// c.JSON(http.StatusOK, responses.UserResponse{Status: http.StatusOK, Message: "success", Data: nil})
 	}
 }
